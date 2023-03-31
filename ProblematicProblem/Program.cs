@@ -5,7 +5,7 @@ using System.Threading;
 
 public class Program
 {
-
+    static bool cont = true;
     static void Main(string[] args)
     {
         Random rng = new Random();
@@ -20,15 +20,17 @@ public class Program
                 "Wine Tasting" };
 
         Console.Write("Hello, welcome to the random activity generator! \nWould you like to generate a random activity? yes/no: ");
-        //bool cont = bool.Parse(Console.ReadLine());
-        var cont = Console.ReadLine();
-        //while (cont)
+        //bool cont = Console.ReadLine();
+
+
+        while(cont)
         {
-           var contResponse = Console.ReadLine().ToLower();
-           if (contResponse == "yes")
-           {
-               cont = true;
-           }
+            var contResponse = Console.ReadLine().ToLower();
+
+            if (contResponse == "yes")
+            {
+                cont = true;
+            }
             else
             {
                 cont = false;
